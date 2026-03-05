@@ -184,6 +184,7 @@ function add(number1:number, number2:number) {
 function clear() {
     let inputValue:string = inputString.value
     inputValue = ""
+    outputString.value = ""
 
     inputString.value = inputValue
 }
