@@ -139,13 +139,9 @@ function runAddSubtract(parsedList:(string | number)[] ) {
             }
         }
 
-        let noMoreOperands = true
-        parsedList.forEach((el) => {
-            if(el === "*" || el === "/") {
-                noMoreOperands = false
-            }
-        })
-        thisStepComplete = noMoreOperands
+        if(parsedList.length === 1) {
+            thisStepComplete = true
+        }
     }
     parsedList = parsedList.filter((el) => el !== "REMOVE")
     return parsedList
